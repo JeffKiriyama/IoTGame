@@ -228,8 +228,7 @@
       *, *::before, *::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
     }
 
-
-    /* --- AJUSTES VISUAIS V4: escala, estrelas, seleção, HUD e final --- */
+    
     .intro-bg {
       background: #080812 !important;
       overflow: hidden;
@@ -497,8 +496,7 @@
       .ending-art img { max-height: 320px; }
     }
 
-
-    /* --- AJUSTES V5: consistência visual e UI mais limpa --- */
+    
     .intro-bg {
       background: #070711;
       overflow: hidden;
@@ -752,8 +750,7 @@
       .end-actions .game-button { font-size: .76rem; }
     }
 
-
-    /* --- AJUSTES V6: fidelidade ao HTML original, ícones, escolhas laterais e seleção limpa --- */
+    
     .intro-bg {
       background: linear-gradient(175deg, var(--bg1) 0%, #000 100%) !important;
       overflow: hidden;
@@ -948,8 +945,7 @@
       .choice-button { font-size: .95rem !important; }
     }
 
-
-    /* --- AJUSTES V7: balão de fala adaptativo sem rolagem obrigatória --- */
+    
     #dialog-area {
       transition: opacity .25s ease, transform .28s ease, grid-template-columns .28s ease;
       will-change: transform;
@@ -1057,9 +1053,8 @@
       }
     }
 
-
-    /* --- AJUSTES V8: responsividade real para seleção e tela interna --- */
-    /* A cena agora é um artboard 16:9 fixo/contido. Isso mantém cenário, hotspots e sprite alinhados em qualquer tela. */
+    
+    
     #game-screen { overflow: hidden !important; background: #020208 !important; }
     #scene-background { display: none !important; }
     #ui-layer {
@@ -1156,7 +1151,6 @@
     #hotspots-layer .hotspot .icon svg { width: 70% !important; height: 70% !important; }
     #hotspots-layer .hotspot-label { max-width: 112px !important; }
 
-    /* O balão fica independente do artboard: ele sobe/encolhe sem mover cenário, sprite ou hotspots. */
     #dialog-area {
       position:absolute !important;
       z-index: 45 !important;
@@ -1224,7 +1218,6 @@
       line-height:1.18 !important;
     }
 
-    /* Tablet: mantém leitura grande. As opções descem, em vez de espremer o texto ao lado. */
     @media (max-width: 1180px) {
       #dialog-area,
       #dialog-area.choice-mode,
@@ -1259,7 +1252,6 @@
       #dialog-area.text-expanded .dialog-box { min-height: clamp(168px, 27vh, 238px) !important; }
     }
 
-    /* Seleção de protagonista: menos espaço morto e escala mais previsível em tablet. */
     #character-creation-screen .pixel-card {
       width: min(96vw, 1060px) !important;
       max-height: calc(100vh - 28px) !important;
@@ -1314,10 +1306,8 @@
       .character-grid { grid-template-columns: repeat(2, minmax(130px, 1fr)) !important; }
     }
 
-  
-
-    /* --- AJUSTES V9: layout responsivo estável + balões uniformes --- */
-    /* Regra geral: a cena não corta. Em 16:9 ela fica centralizada; em telas mais largas pode esticar sem deslocar hotspots. */
+    
+    
     #game-screen {
       overflow: hidden !important;
       background: #020208 !important;
@@ -1347,7 +1337,6 @@
       }
     }
 
-    /* Hotspots continuam presos ao artboard/cenário, sem subir com o balão. */
     #hotspots-layer .hotspot {
       min-width: clamp(118px, 11.5vw, 170px) !important;
       min-height: clamp(44px, 4.4vw, 58px) !important;
@@ -1368,7 +1357,6 @@
       overflow-wrap: break-word !important;
     }
 
-    /* Balão de diálogo: sem áreas vazias, título centralizado e texto mais legível. */
     #dialog-area {
       position: absolute !important;
       z-index: 45 !important;
@@ -1483,7 +1471,6 @@
       border-radius: 14px !important;
     }
 
-    /* Tablet e telas mais estreitas: texto permanece grande; opções descem e não espremem o balão. */
     @media (max-width: 1180px) {
       #dialog-area,
       #dialog-area.choice-mode,
@@ -1546,7 +1533,6 @@
       .choice-button { min-height: 44px !important; }
     }
 
-    /* Seleção de personagem: melhora o encaixe em desktop amplo e tablet sem deixar espaço morto. */
     #character-creation-screen .pixel-card {
       width: min(94vw, 1120px) !important;
       max-height: calc(100dvh - 30px) !important;
@@ -1609,13 +1595,11 @@
     }
 
   
-
-  /* --- AJUSTES V11: fundo uniforme desktop/tablet + barra inferior independente no tablet --- */
   #game-screen {
     background:#03030a !important;
     overflow:hidden !important;
   }
-  /* A camada antiga de fundo borrado fica desativada: o cenário não se mistura com barras pretas. */
+  
   #scene-background {
     display:none !important;
   }
@@ -1634,7 +1618,7 @@
     top:0 !important;
     transform:translateX(-50%) !important;
   }
-  /* Barra inferior separada para tablets mais altos que 16:9. Ela não é derivada do cenário. */
+  
   body.tablet-layout #game-screen::after {
     content:"";
     position:absolute;
@@ -1664,10 +1648,8 @@
     height: min(78vh, 760px) !important;
   }
 
-
-
-  /* --- AJUSTES V12: cenário sem distorção + bloqueio visual de ações durante diálogo --- */
-  /* Computador: ocupa a tela sem esticar a imagem. Tablet: mantém artboard 16:9 sem corte. */
+  
+  
   #scene-stage {
     background-repeat: no-repeat !important;
     background-position: center center !important;
@@ -1680,7 +1662,7 @@
     left: 50% !important;
     top: 50% !important;
     transform: translate(-50%, -50%) !important;
-    background-size: cover !important; /* preserva proporção: não distorce no computador */
+    background-size: cover !important; 
   }
   body.desktop-layout #game-screen::after {
     content: none !important;
@@ -1694,7 +1676,7 @@
     left: 50% !important;
     top: 0 !important;
     transform: translateX(-50%) !important;
-    background-size: contain !important; /* sem corte e sem distorção no tablet */
+    background-size: contain !important; 
     background-color: #03030a !important;
   }
   body.tablet-layout #game-screen {
@@ -1716,7 +1698,7 @@
       radial-gradient(ellipse at 50% 0%, rgba(162,121,247,.24), rgba(0,0,0,0) 58%) !important;
     box-shadow: 0 -18px 34px rgba(0,0,0,.72) !important;
   }
-  /* Enquanto há fala ativa, hotspots não recebem toque/clique e ficam visualmente em espera. */
+  
   body.dialog-action-lock #hotspots-layer {
     pointer-events: none !important;
   }
@@ -1727,8 +1709,7 @@
     transform: none !important;
   }
 
-
-  /* --- AJUSTES V13: assets do Amigo + final suave + fundos por dispositivo --- */
+  
   #end-screen {
     transition: opacity .55s ease, visibility .55s ease !important;
   }
@@ -1771,11 +1752,8 @@
     to { opacity: 1; transform: translateX(0); }
   }
 
-
-
-  /* --- AJUSTES V15: desktop full-screen externo + tablet preservado + refinamentos finos de UI --- */
-  /* Quando as artes finais externas estão ligadas, o tablet usa a cena em tela cheia.
-     A imagem preserva proporção com cover: não estica e remove a barra inferior. */
+  
+  
   body.external-assets.tablet-layout #scene-stage {
     width: 100vw !important;
     height: 100dvh !important;
@@ -1797,8 +1775,6 @@
     background: #03030a !important;
   }
 
-  /* Desktop com artes externas: preenche toda a janela.
-     Aqui a imagem pode deformar levemente para eliminar barras pretas laterais/superiores. */
   body.external-assets.desktop-layout #scene-stage {
     width: 100vw !important;
     height: 100dvh !important;
@@ -1812,7 +1788,6 @@
     background-position: center center !important;
   }
 
-  /* Título do cenário: fica abaixo da área do nome do personagem, com respiro de cerca de 10px. */
   #scene-label {
     left: clamp(76px, 8.5vw, 170px) !important;
     top: calc(max(10px, var(--safe-top)) + clamp(54px, 7.2vh, 68px) + 10px) !important;
@@ -1820,13 +1795,11 @@
     transform: none !important;
   }
 
-  /* Nome do falante alinhado à esquerda nos balões de fala. */
   #speaker-name {
     text-align: left !important;
     justify-content: flex-start !important;
   }
 
-  /* Botões de interação passam a se ajustar ao tamanho real do texto. */
   #hotspots-layer .hotspot {
     width: fit-content !important;
     min-width: unset !important;
@@ -1845,8 +1818,7 @@
     }
   }
 
-
-  /* --- AJUSTES V16: rótulo do cenário alinhado à esquerda, junto ao topo da interface --- */
+  
   #scene-label {
     left: 14px !important;
     top: calc(max(10px, var(--safe-top)) + clamp(54px, 7.2vh, 68px) + 10px) !important;
@@ -1862,8 +1834,7 @@
     }
   }
 
-
-  /* --- AJUSTES V17: rótulo do cenário com distância responsiva no tablet --- */
+  
   body.tablet-layout #scene-label {
     top: var(--scene-label-top, calc(max(10px, var(--safe-top)) + clamp(54px, 7.2vh, 68px) + 10px)) !important;
   }
@@ -1874,7 +1845,854 @@
     }
   }
 
-</style>
+  
+  :root {
+    --game-text-scale: 1;
+    --scene-sprite-width: min(31%, 400px);
+    --scene-sprite-height: 76%;
+    --scene-sprite-width-desktop: min(27vw, 430px);
+    --scene-sprite-height-desktop: min(82vh, 800px);
+    --ending-sprite-max-height: min(82vh, 700px);
+  }
+
+  #player-sprite-wrap {
+    width: var(--scene-sprite-width) !important;
+    height: var(--scene-sprite-height) !important;
+  }
+  body.desktop-layout #player-sprite-wrap,
+  body.external-assets.desktop-layout #player-sprite-wrap {
+    width: var(--scene-sprite-width-desktop) !important;
+    height: var(--scene-sprite-height-desktop) !important;
+  }
+  .ending-art img {
+    max-height: var(--ending-sprite-max-height) !important;
+  }
+
+  #dialog-area,
+  #dialog-area.choice-mode,
+  #dialog-area.choice-mode.text-expanded,
+  #dialog-area.text-expanded:not(.choice-mode) {
+    bottom: max(18px, var(--safe-bottom)) !important;
+    transform: translateX(-50%) !important;
+  }
+  #dialog-area.closed {
+    transform: translate(-50%, 18px) !important;
+  }
+  #dialog-area .dialog-box {
+    transform: translateY(0) !important;
+    transition: transform .24s ease, min-height .22s ease !important;
+  }
+  #dialog-area.text-expanded .dialog-box {
+    transform: translateY(calc(-1 * clamp(14px, 3vh, 42px))) !important;
+  }
+  #dialog-area.choice-mode.text-expanded .dialog-box {
+    transform: translateY(calc(-1 * clamp(10px, 2.2vh, 30px))) !important;
+  }
+  #dialog-portrait-frame,
+  #choices-container {
+    transform: none !important;
+  }
+
+  #dialog-area.no-portrait {
+    grid-template-columns: minmax(0, 1fr) minmax(282px, 360px) !important;
+  }
+  #dialog-area.no-portrait:not(.choice-mode) {
+    grid-template-columns: minmax(0, 900px) !important;
+    justify-content: center !important;
+  }
+  #dialog-area.no-portrait #dialog-portrait-frame {
+    display: none !important;
+  }
+  #dialog-area.no-portrait .dialog-box,
+  #dialog-area.no-portrait:not(.choice-mode) .dialog-box {
+    grid-column: 1 !important;
+  }
+  #dialog-area.no-portrait.choice-mode #choices-container {
+    grid-column: 2 !important;
+  }
+  @media (max-width: 1180px) {
+    #dialog-area.no-portrait,
+    #dialog-area.no-portrait.choice-mode,
+    #dialog-area.no-portrait:not(.choice-mode) {
+      grid-template-columns: minmax(0, 1fr) !important;
+    }
+    #dialog-area.no-portrait.choice-mode #choices-container {
+      grid-column: 1 !important;
+    }
+  }
+
+  #game-screen #speaker-name {
+    font-size: calc(clamp(1.28rem, 1.55vw, 1.58rem) * var(--game-text-scale, 1)) !important;
+  }
+  #game-screen #dialog-text {
+    font-size: calc(clamp(1.14rem, 1.38vw, 1.32rem) * var(--game-text-scale, 1)) !important;
+  }
+  #game-screen .choice-button {
+    font-size: calc(clamp(.96rem, 1.05vw, 1.08rem) * var(--game-text-scale, 1)) !important;
+  }
+  #hotspots-layer .hotspot {
+    font-size: calc(clamp(.8rem, 1vw, .98rem) * var(--game-text-scale, 1)) !important;
+  }
+  @media (max-width: 1180px) {
+    #game-screen #dialog-text {
+      font-size: calc(clamp(1.18rem, 2.25vw, 1.36rem) * var(--game-text-scale, 1)) !important;
+    }
+    #game-screen .choice-button {
+      font-size: calc(clamp(.98rem, 1.9vw, 1.1rem) * var(--game-text-scale, 1)) !important;
+    }
+  }
+  @media (max-width: 760px) {
+    #game-screen #speaker-name { font-size: calc(1.22rem * var(--game-text-scale, 1)) !important; }
+    #game-screen #dialog-text { font-size: calc(1.12rem * var(--game-text-scale, 1)) !important; }
+  }
+
+  #character-creation-screen .pixel-card {
+    width: min(92vw, 1040px) !important;
+  }
+  .character-selection-shell {
+    grid-template-columns: minmax(360px, 1fr) minmax(250px, 318px) !important;
+  }
+  .character-preview-panel {
+    width: 100% !important;
+    max-width: 318px !important;
+    justify-self: end !important;
+  }
+  .character-preview-stage img {
+    max-width: 92% !important;
+  }
+  .character-card .character-thumb {
+    width: clamp(82px, 9.4vw, 106px) !important;
+    height: clamp(82px, 9.4vw, 106px) !important;
+  }
+  .character-card strong {
+    font-size: 1.08rem !important;
+  }
+  @media (max-width: 900px) {
+    #character-creation-screen .pixel-card { width: min(94vw, 780px) !important; }
+    .character-selection-shell { grid-template-columns: 1fr !important; }
+    .character-preview-panel { max-width: none !important; justify-self: stretch !important; }
+  }
+
+  #achievement-popup {
+    cursor: pointer;
+    touch-action: pan-x;
+    user-select: none;
+    will-change: transform, opacity;
+  }
+  #achievement-popup.dismissed {
+    transform: translateX(130%) !important;
+    opacity: 0;
+  }
+
+  
+
+  #dialog-area,
+  #dialog-area.choice-mode,
+  #dialog-area.choice-mode.text-expanded,
+  #dialog-area.text-expanded,
+  #dialog-area.text-expanded:not(.choice-mode) {
+    bottom: max(18px, var(--safe-bottom)) !important;
+    transform: translateX(-50%) !important;
+    align-items: end !important;
+  }
+  #dialog-area.closed {
+    transform: translate(-50%, 18px) !important;
+  }
+  #dialog-area .dialog-box,
+  #dialog-area.text-expanded .dialog-box,
+  #dialog-area.choice-mode.text-expanded .dialog-box {
+    align-self: end !important;
+    transform: none !important;
+    transform-origin: bottom center !important;
+  }
+  #dialog-area:not(.text-expanded) .dialog-box {
+    min-height: clamp(142px, 20vh, 184px) !important;
+  }
+  #dialog-area.text-expanded .dialog-box {
+    min-height: clamp(202px, 30vh, 314px) !important;
+  }
+  #dialog-area.choice-mode.text-expanded .dialog-box {
+    min-height: clamp(176px, 25vh, 260px) !important;
+  }
+  #dialog-portrait-frame,
+  #dialog-area.text-expanded #dialog-portrait-frame,
+  #choices-container,
+  #dialog-area.text-expanded #choices-container {
+    align-self: end !important;
+    transform: none !important;
+  }
+  #dialog-area.text-expanded #dialog-text {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  @media (max-width: 1180px) {
+    #dialog-area,
+    #dialog-area.choice-mode,
+    #dialog-area.choice-mode.text-expanded,
+    #dialog-area.text-expanded,
+    #dialog-area.text-expanded:not(.choice-mode) {
+      bottom: max(14px, var(--safe-bottom)) !important;
+      transform: translateX(-50%) !important;
+    }
+  }
+  @media (max-width: 720px) {
+    #dialog-area,
+    #dialog-area.choice-mode,
+    #dialog-area.choice-mode.text-expanded,
+    #dialog-area.text-expanded,
+    #dialog-area.text-expanded:not(.choice-mode) {
+      bottom: max(8px, var(--safe-bottom)) !important;
+      transform: translateX(-50%) !important;
+    }
+    #dialog-area.text-expanded .dialog-box {
+      min-height: clamp(168px, 28vh, 238px) !important;
+    }
+  }
+
+  #character-creation-screen .pixel-card {
+    width: min(92vw, 980px) !important;
+  }
+  .character-selection-shell {
+    width: min(100%, 880px) !important;
+    margin: 8px auto 14px !important;
+    grid-template-columns: minmax(260px, 300px) minmax(390px, 1fr) !important;
+    gap: clamp(14px, 2vw, 20px) !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+  }
+  .character-preview-panel {
+    grid-column: 1 !important;
+    width: 100% !important;
+    max-width: 300px !important;
+    justify-self: stretch !important;
+    min-height: clamp(330px, 47vh, 430px) !important;
+  }
+  .character-preview-stage {
+    min-height: clamp(244px, 36vh, 318px) !important;
+  }
+  .character-preview-stage img {
+    max-width: 90% !important;
+    max-height: clamp(265px, 43vh, 392px) !important;
+  }
+  .character-grid {
+    grid-column: 2 !important;
+    grid-template-columns: repeat(2, minmax(170px, 1fr)) !important;
+    gap: clamp(12px, 1.45vw, 16px) !important;
+  }
+  .character-card {
+    min-height: clamp(164px, 22vh, 176px) !important;
+    padding: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    text-align: center !important;
+  }
+  .character-card .character-thumb {
+    width: clamp(92px, 8.8vw, 102px) !important;
+    height: clamp(92px, 8.8vw, 102px) !important;
+    flex: 0 0 clamp(92px, 8.8vw, 102px) !important;
+    margin: 0 auto !important;
+  }
+  .character-card strong {
+    min-height: 24px !important;
+    line-height: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .character-card span:not(.character-thumb) {
+    min-height: 30px !important;
+    line-height: 1.15 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  @media (max-width: 900px) {
+    #character-creation-screen .pixel-card { width: min(94vw, 760px) !important; }
+    .character-selection-shell {
+      width: min(100%, 620px) !important;
+      grid-template-columns: 1fr !important;
+    }
+    .character-preview-panel {
+      grid-column: 1 !important;
+      max-width: 100% !important;
+      min-height: 255px !important;
+    }
+    .character-grid {
+      grid-column: 1 !important;
+      grid-template-columns: repeat(2, minmax(130px, 1fr)) !important;
+    }
+  }
+
+  
+  #dialog-area,
+  #dialog-area.choice-mode,
+  #dialog-area.choice-mode.text-expanded,
+  #dialog-area.text-expanded,
+  #dialog-area.text-expanded:not(.choice-mode) {
+    position: absolute !important;
+    left: 50% !important;
+    bottom: max(18px, var(--safe-bottom)) !important;
+    transform: translateX(-50%) !important;
+    align-items: end !important;
+    overflow: visible !important;
+    transition: opacity .22s ease, transform .26s ease !important;
+  }
+  #dialog-area.closed {
+    opacity: 0 !important;
+    transform: translate(-50%, 18px) !important;
+    pointer-events: none !important;
+  }
+  #dialog-portrait-frame,
+  #choices-container,
+  #dialog-area.text-expanded #dialog-portrait-frame,
+  #dialog-area.text-expanded #choices-container,
+  #dialog-area.choice-mode #choices-container,
+  #dialog-area.choice-mode.text-expanded #choices-container {
+    align-self: end !important;
+    transform: none !important;
+  }
+  #dialog-area .dialog-box,
+  #dialog-area.text-expanded .dialog-box,
+  #dialog-area.choice-mode .dialog-box,
+  #dialog-area.choice-mode.text-expanded .dialog-box {
+    align-self: end !important;
+    transform: none !important;
+    transform-origin: bottom center !important;
+    min-height: 0 !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    transition: min-height .22s ease, height .22s ease, opacity .18s ease !important;
+  }
+  #dialog-text,
+  #dialog-area.text-expanded #dialog-text,
+  #dialog-area.choice-mode #dialog-text,
+  #dialog-area.choice-mode.text-expanded #dialog-text {
+    min-height: clamp(72px, 11vh, 94px) !important;
+    max-height: clamp(118px, 25vh, 188px) !important;
+    height: auto !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding: 14px 18px 24px !important;
+    margin: 0 !important;
+    scroll-behavior: smooth;
+  }
+  #dialog-area.very-long-text #dialog-text,
+  #dialog-area.choice-mode.very-long-text #dialog-text {
+    max-height: clamp(132px, 29vh, 216px) !important;
+  }
+  #dialog-area:not(.choice-mode) {
+    grid-template-columns: minmax(132px, 168px) minmax(0, 900px) !important;
+    justify-content: center !important;
+  }
+  #dialog-area.choice-mode {
+    grid-template-columns: minmax(132px, 168px) minmax(0, 1fr) minmax(282px, 360px) !important;
+  }
+  @media (max-width: 1180px) {
+    #dialog-area,
+    #dialog-area.choice-mode,
+    #dialog-area.choice-mode.text-expanded,
+    #dialog-area.text-expanded,
+    #dialog-area.text-expanded:not(.choice-mode) {
+      bottom: max(14px, var(--safe-bottom)) !important;
+      transform: translateX(-50%) !important;
+    }
+    #dialog-area.choice-mode,
+    #dialog-area.choice-mode.text-expanded,
+    #dialog-area:not(.choice-mode),
+    #dialog-area.text-expanded:not(.choice-mode) {
+      grid-template-columns: 1fr !important;
+    }
+    #dialog-area.choice-mode #choices-container {
+      grid-column: 1 !important;
+    }
+  }
+  @media (max-width: 720px) {
+    #dialog-area,
+    #dialog-area.choice-mode,
+    #dialog-area.choice-mode.text-expanded,
+    #dialog-area.text-expanded,
+    #dialog-area.text-expanded:not(.choice-mode) {
+      bottom: max(8px, var(--safe-bottom)) !important;
+      transform: translateX(-50%) !important;
+    }
+    #dialog-text,
+    #dialog-area.text-expanded #dialog-text,
+    #dialog-area.choice-mode #dialog-text,
+    #dialog-area.choice-mode.text-expanded #dialog-text {
+      max-height: clamp(110px, 28vh, 174px) !important;
+    }
+  }
+
+  
+  :root {
+    --ui-radius-soft: 14px;
+    --ui-radius-card: 18px;
+    --touch-target: 48px;
+  }
+
+  .screen:not(.active) {
+    pointer-events: none !important;
+  }
+
+  .screen.active {
+    pointer-events: auto !important;
+  }
+
+  .game-button,
+  .choice-button,
+  .character-card,
+  .hotspot,
+  .save-slot {
+    min-height: var(--touch-target);
+  }
+
+  .game-button:focus-visible,
+  .choice-button:focus-visible,
+  .character-card:focus-visible,
+  .hotspot:focus-visible,
+  .hud-icon:focus-visible,
+  .save-slot:focus-visible {
+    outline: 3px solid var(--accent2);
+    outline-offset: 4px;
+  }
+
+  .game-button,
+  .choice-button {
+    letter-spacing: .035em;
+    text-wrap: balance;
+  }
+
+  .game-button:disabled,
+  .choice-button:disabled,
+  .hotspot:disabled {
+    cursor: not-allowed !important;
+  }
+
+  body.dialog-action-lock #hotspots-layer,
+  body.dialog-action-lock #hotspots-layer .hotspot {
+    pointer-events: none !important;
+  }
+
+  #hotspots-layer .hotspot {
+    min-height: clamp(46px, 6.4vh, 58px) !important;
+    gap: 8px !important;
+    border-radius: 14px !important;
+    background:
+      linear-gradient(180deg, rgba(35, 40, 86, .96), rgba(13, 15, 34, .96)) !important;
+    box-shadow:
+      0 8px 0 rgba(0,0,0,.55),
+      0 0 0 1px rgba(255,255,255,.08) inset,
+      0 0 18px rgba(162,121,247,.18) !important;
+  }
+
+  #hotspots-layer .hotspot.done,
+  #hotspots-layer .hotspot.busy,
+  #hotspots-layer .hotspot:disabled {
+    opacity: .62 !important;
+    filter: saturate(.75) brightness(.9) !important;
+    animation: none !important;
+  }
+
+  #hotspots-layer .hotspot-label {
+    line-height: 1.08 !important;
+    text-align: left !important;
+  }
+
+  #dialog-area,
+  #dialog-area.choice-mode,
+  #dialog-area.text-expanded,
+  #dialog-area.choice-mode.text-expanded,
+  #dialog-area.text-expanded:not(.choice-mode) {
+    bottom: max(16px, var(--safe-bottom)) !important;
+    transform: translateX(-50%) !important;
+    align-items: end !important;
+  }
+
+  #dialog-area.closed {
+    transform: translate(-50%, 18px) !important;
+  }
+
+  #dialog-area .dialog-box {
+    transform: none !important;
+    transform-origin: bottom center !important;
+    border-radius: var(--ui-radius-card) !important;
+    background:
+      linear-gradient(180deg, rgba(19, 24, 55, .98), rgba(8, 10, 24, .98)) !important;
+  }
+
+  #game-screen #speaker-name {
+    align-self: flex-start !important;
+    width: fit-content !important;
+    max-width: calc(100% - 24px) !important;
+    min-height: 0 !important;
+    margin: 10px 12px 0 !important;
+    padding: 7px 14px 6px !important;
+    border: 2px solid var(--line) !important;
+    border-radius: 12px !important;
+    background: rgba(6, 8, 20, .78) !important;
+    line-height: 1.15 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  #game-screen #dialog-text {
+    scrollbar-gutter: stable both-edges;
+    text-wrap: pretty;
+  }
+
+  #choices-container {
+    align-self: end !important;
+  }
+
+  .choice-button {
+    border-radius: 14px !important;
+    box-shadow: 0 7px 0 rgba(0,0,0,.46), inset 0 1px 0 rgba(255,255,255,.08) !important;
+  }
+
+  #character-creation-screen .pixel-card {
+    width: min(94vw, 980px) !important;
+    max-height: min(92dvh, 760px) !important;
+  }
+
+  .character-selection-shell {
+    align-items: stretch !important;
+    grid-template-columns: minmax(340px, 1fr) minmax(238px, 300px) !important;
+    gap: clamp(14px, 2.4vw, 24px) !important;
+  }
+
+  .character-grid {
+    gap: clamp(10px, 1.7vw, 16px) !important;
+  }
+
+  .character-card {
+    min-height: clamp(132px, 18vh, 168px) !important;
+    padding: clamp(10px, 1.6vw, 15px) !important;
+    border-radius: 16px !important;
+  }
+
+  .character-card .character-thumb {
+    width: clamp(76px, 8.6vw, 98px) !important;
+    height: clamp(76px, 8.6vw, 98px) !important;
+  }
+
+  .character-preview-panel {
+    max-width: 300px !important;
+    min-height: clamp(250px, 42vh, 360px) !important;
+    border-radius: 18px !important;
+  }
+
+  .character-preview-stage {
+    min-height: clamp(170px, 30vh, 258px) !important;
+  }
+
+  .character-preview-stage img {
+    max-height: clamp(185px, 34vh, 292px) !important;
+    object-fit: contain !important;
+  }
+
+  @media (max-width: 900px) {
+    #character-creation-screen .pixel-card {
+      width: min(95vw, 780px) !important;
+      max-height: 94dvh !important;
+    }
+
+    .character-selection-shell {
+      grid-template-columns: 1fr !important;
+    }
+
+    .character-preview-panel {
+      order: -1 !important;
+      max-width: none !important;
+      min-height: clamp(205px, 30vh, 260px) !important;
+    }
+
+    .character-preview-stage {
+      min-height: clamp(132px, 20vh, 178px) !important;
+    }
+
+    .character-preview-stage img {
+      max-height: clamp(155px, 24vh, 215px) !important;
+    }
+
+    .character-grid {
+      grid-template-columns: repeat(2, minmax(128px, 1fr)) !important;
+    }
+
+    .character-card {
+      min-height: clamp(116px, 16vh, 142px) !important;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .character-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    #dialog-area,
+    #dialog-area.choice-mode,
+    #dialog-area.text-expanded,
+    #dialog-area.choice-mode.text-expanded,
+    #dialog-area.text-expanded:not(.choice-mode) {
+      width: calc(100vw - 18px) !important;
+      bottom: max(8px, var(--safe-bottom)) !important;
+    }
+
+    #game-screen #speaker-name {
+      margin: 8px 10px 0 !important;
+      padding-inline: 12px !important;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hotspot,
+    .game-button,
+    .choice-button,
+    .character-card,
+    #dialog-area,
+    .dialog-box {
+      transition-duration: .01ms !important;
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+
+  #character-creation-screen .pixel-card {
+    width: min(96vw, 980px) !important;
+    max-height: calc(100dvh - 28px) !important;
+    padding: clamp(18px, 2vw, 24px) !important;
+    overflow: hidden auto !important;
+  }
+
+  #character-creation-screen .section-title.protagonist-title {
+    margin: 0 0 14px !important;
+    text-align: center !important;
+  }
+
+  @media (min-width: 901px) {
+    .character-selection-shell {
+      width: min(100%, 880px) !important;
+      height: clamp(400px, 70dvh, 482px) !important;
+      margin: 8px auto 14px !important;
+      display: grid !important;
+      grid-template-columns: minmax(280px, 300px) minmax(0, 560px) !important;
+      gap: 20px !important;
+      align-items: stretch !important;
+      justify-content: center !important;
+    }
+
+    .character-preview-panel {
+      grid-column: 1 !important;
+      grid-row: 1 !important;
+      width: 100% !important;
+      max-width: 300px !important;
+      height: 100% !important;
+      min-height: 0 !important;
+      justify-self: stretch !important;
+      display: flex !important;
+      flex-direction: column !important;
+      opacity: 1 !important;
+      transform: none !important;
+      animation: none !important;
+    }
+
+    .character-preview-panel.ready {
+      opacity: 1 !important;
+      transform: none !important;
+      animation: none !important;
+    }
+
+    .character-preview-stage {
+      flex: 1 1 auto !important;
+      min-height: 0 !important;
+      height: auto !important;
+      display: flex !important;
+      align-items: flex-end !important;
+      justify-content: center !important;
+      padding: 16px 12px 8px !important;
+    }
+
+    .character-preview-stage img {
+      width: auto !important;
+      height: auto !important;
+      max-width: 88% !important;
+      max-height: 100% !important;
+      object-fit: contain !important;
+      object-position: bottom center !important;
+      display: block !important;
+    }
+
+    .character-preview-info {
+      flex: 0 0 auto !important;
+      min-height: 74px !important;
+      padding: 12px 10px 14px !important;
+    }
+
+    .character-grid {
+      grid-column: 2 !important;
+      grid-row: 1 !important;
+      width: 100% !important;
+      height: 100% !important;
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      grid-template-rows: repeat(2, minmax(0, 1fr)) !important;
+      gap: 18px !important;
+      margin: 0 !important;
+      align-content: stretch !important;
+    }
+
+    .character-card {
+      width: 100% !important;
+      height: 100% !important;
+      min-height: 0 !important;
+      padding: 14px 12px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      text-align: center !important;
+    }
+
+
+
+    #character-creation-screen .character-card.selected {
+      transform: none !important;
+    }
+
+    .character-card .character-thumb {
+      width: clamp(92px, 9.6vw, 100px) !important;
+      height: clamp(92px, 9.6vw, 100px) !important;
+      flex: 0 0 clamp(92px, 9.6vw, 100px) !important;
+      margin: 0 auto !important;
+    }
+
+    .character-card .character-thumb img,
+    .character-card img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+    }
+
+    .creation-actions {
+      width: min(100%, 794px) !important;
+      margin: 14px auto 0 !important;
+      display: grid !important;
+      grid-template-columns: minmax(0, 520px) minmax(220px, 260px) !important;
+      gap: 14px !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .creation-actions .primary-start,
+    .creation-actions .back-button {
+      width: 100% !important;
+      min-height: 54px !important;
+      margin: 0 !important;
+    }
+  }
+
+  @media (max-width: 900px) {
+    #character-creation-screen .pixel-card {
+      width: min(95vw, 780px) !important;
+      max-height: 94dvh !important;
+    }
+
+    .character-selection-shell {
+      width: min(100%, 620px) !important;
+      height: auto !important;
+      grid-template-columns: 1fr !important;
+      margin: 8px auto 14px !important;
+    }
+
+    .character-preview-panel {
+      grid-column: 1 !important;
+      order: -1 !important;
+      max-width: none !important;
+      min-height: clamp(220px, 32vh, 280px) !important;
+    }
+
+    .character-preview-stage {
+      min-height: clamp(150px, 22vh, 198px) !important;
+    }
+
+    .character-preview-stage img {
+      max-height: clamp(170px, 26vh, 235px) !important;
+      max-width: 90% !important;
+    }
+
+    .character-grid {
+      grid-column: 1 !important;
+      grid-template-columns: repeat(2, minmax(128px, 1fr)) !important;
+      gap: 12px !important;
+    }
+
+    .creation-actions {
+      width: min(100%, 520px) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 12px !important;
+      margin: 12px auto 0 !important;
+    }
+
+    .creation-actions .primary-start,
+    .creation-actions .back-button {
+      width: 100% !important;
+      min-height: 50px !important;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .character-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  #dialog-area.no-portrait.choice-mode,
+  #dialog-area.no-portrait.choice-mode.text-expanded {
+    width: min(1160px, calc(100vw - 36px)) !important;
+    grid-template-columns: minmax(120px, 150px) minmax(0, 650px) minmax(282px, 330px) !important;
+    justify-content: center !important;
+    gap: 12px !important;
+  }
+
+  #dialog-area.no-portrait.choice-mode .dialog-box,
+  #dialog-area.no-portrait.choice-mode.text-expanded .dialog-box {
+    grid-column: 2 !important;
+    max-width: 650px !important;
+    justify-self: stretch !important;
+  }
+
+  #dialog-area.no-portrait.choice-mode #choices-container,
+  #dialog-area.no-portrait.choice-mode.text-expanded #choices-container {
+    grid-column: 3 !important;
+    width: min(100%, 330px) !important;
+    justify-self: start !important;
+  }
+
+  @media (max-width: 1180px) {
+    #dialog-area.no-portrait.choice-mode,
+    #dialog-area.no-portrait.choice-mode.text-expanded {
+      width: min(900px, calc(100vw - 24px)) !important;
+      grid-template-columns: 1fr !important;
+    }
+
+    #dialog-area.no-portrait.choice-mode .dialog-box,
+    #dialog-area.no-portrait.choice-mode.text-expanded .dialog-box,
+    #dialog-area.no-portrait.choice-mode #choices-container,
+    #dialog-area.no-portrait.choice-mode.text-expanded #choices-container {
+      grid-column: 1 !important;
+      max-width: none !important;
+      width: 100% !important;
+      justify-self: stretch !important;
+    }
+  }
+
+  </style>
 </head>
 <body>
   <noscript><div style="padding:20px;color:white;background:#0d0c1d;font-family:monospace">Este jogo precisa de JavaScript ativado para funcionar.</div></noscript>
@@ -2032,6 +2850,7 @@
         <div class="settings-row"><label for="music-volume">Música ambiente</label><input id="music-volume" type="range" min="0" max="1" step="0.05"></div>
         <div class="settings-row"><label for="sfx-volume">Efeitos sonoros</label><input id="sfx-volume" type="range" min="0" max="1" step="0.05"></div>
         <div class="settings-row"><label for="typing-speed">Velocidade do texto</label><input id="typing-speed" type="range" min="0" max="45" step="5"></div>
+        <div class="settings-row"><label for="game-font-scale">Tamanho da letra do jogo</label><input id="game-font-scale" type="range" min="1" max="1.22" step="0.02"></div>
         <div class="settings-row"><label for="reduce-motion-setting">Reduzir animações</label><input id="reduce-motion-setting" type="checkbox"></div>
         <button class="game-button secondary wide" data-action="close-settings" style="margin-top:16px">Voltar</button>
       </div>
@@ -2138,10 +2957,6 @@
         <text x="960" y="120" text-anchor="middle" font-family="Courier New, monospace" font-size="74" fill="#e7e7fb" stroke="#000" stroke-width="6">${title}</text>
       </svg>`);
 
-    /*
-      Para usar artes finais em arquivos: altere useExternal para true e coloque as imagens
-      nos caminhos indicados. Enquanto useExternal estiver false, o jogo usa placeholders SVG.
-    */
     const CUSTOM_ASSETS = {
       useExternal: true,
       scenes: {
@@ -2280,7 +3095,6 @@
         credits_seen: { name: "Cena Pós-Créditos", description: "Assistiu aos créditos do projeto.", hint: "Abra a tela de créditos depois do final." }
       }
     };
-
 
     const ActionIcons = {
       "TV": `<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="11" rx="2"></rect><path d="M8 20h8M12 17v3M8 4l4 2 4-2"></path></svg>`,
@@ -2439,7 +3253,7 @@
         flags: {},
         unlockedAchievements: {},
         decisions: [],
-        settings: { musicVolume: 0.25, sfxVolume: 0.75, typingSpeed: 18, reduceMotion: false },
+        settings: { musicVolume: 0.25, sfxVolume: 0.75, typingSpeed: 18, gameFontScale: 1, reduceMotion: false },
         phaseSnapshots: {},
         activeAction: null,
         inProgressActions: {},
@@ -2570,8 +3384,9 @@
       choiceLocked: false,
       typeText: "",
       typeIndex: 0,
+      achievementTimer: null,
       cache() {
-        const ids = ["story-intro-screen","intro-screen","start-screen","character-creation-screen","phase-transition-screen","game-screen","end-screen","intro-lines","character-selection","player-name","scene-background","scene-effects","scene-stage","player-sprite","hud-avatar","hud-name","hud-role","privacy-bar","security-bar","exposure-bar","privacy-num","security-num","exposure-num","scene-label","hotspots-layer","dialog-area","dialog-avatar","speaker-name","dialog-text","choices-container","skip-typing-button","character-preview-panel","character-preview-img","character-preview-name","character-preview-role","phase-title","phase-subtitle","end-art","end-title","end-description","end-stats","decision-summary","unlocked-summary","locked-summary","pause-menu","settings-menu","save-load-menu","achievements-menu","credits-screen","confirm-modal","confirm-title","confirm-text","confirm-yes","music-volume","sfx-volume","typing-speed","reduce-motion-setting","save-load-title","save-slots-container","achievements-list","achievement-popup","achievement-popup-name","start-adventure-button"];
+        const ids = ["story-intro-screen","intro-screen","start-screen","character-creation-screen","phase-transition-screen","game-screen","end-screen","intro-lines","character-selection","player-name","scene-background","scene-effects","scene-stage","player-sprite","hud-avatar","hud-name","hud-role","privacy-bar","security-bar","exposure-bar","privacy-num","security-num","exposure-num","scene-label","hotspots-layer","dialog-area","dialog-avatar","speaker-name","dialog-text","choices-container","skip-typing-button","character-preview-panel","character-preview-img","character-preview-name","character-preview-role","phase-title","phase-subtitle","end-art","end-title","end-description","end-stats","decision-summary","unlocked-summary","locked-summary","pause-menu","settings-menu","save-load-menu","achievements-menu","credits-screen","confirm-modal","confirm-title","confirm-text","confirm-yes","music-volume","sfx-volume","typing-speed","game-font-scale","reduce-motion-setting","save-load-title","save-slots-container","achievements-list","achievement-popup","achievement-popup-name","start-adventure-button"];
         ids.forEach(id => this.el[id.replace(/-([a-z])/g, (_, c) => c.toUpperCase())] = document.getElementById(id));
         this.el.screens = document.querySelectorAll(".screen");
         this.el.modals = document.querySelectorAll(".modal-overlay");
@@ -2627,6 +3442,9 @@
         this.el.musicVolume.value = State.data.settings.musicVolume;
         this.el.sfxVolume.value = State.data.settings.sfxVolume;
         this.el.typingSpeed.value = State.data.settings.typingSpeed;
+        const fontScale = Number(State.data.settings.gameFontScale || 1);
+        if (this.el.gameFontScale) this.el.gameFontScale.value = String(fontScale);
+        document.documentElement.style.setProperty("--game-text-scale", String(fontScale));
         this.el.reduceMotionSetting.checked = State.data.settings.reduceMotion;
         document.documentElement.style.setProperty("scroll-behavior", State.data.settings.reduceMotion ? "auto" : "smooth");
       },
@@ -2676,24 +3494,47 @@
           button.dataset.node = action.node;
           button.dataset.actionId = action.id;
           button.disabled = done || busy;
+          button.setAttribute("aria-disabled", done || busy ? "true" : "false");
+          button.tabIndex = done || busy ? -1 : 0;
           const label = done ? "Concluído" : busy ? "Em andamento" : action.label;
           button.innerHTML = `<span class="icon icon-${escapeHTML(String(action.icon || "obj").toLowerCase().replace(/[^a-z0-9]+/g, "-"))}">${actionIconMarkup(action.icon)}</span><span class="hotspot-label">${escapeHTML(label)}</span>`;
           this.el.hotspotsLayer.appendChild(button);
         });
+        this.syncHotspotInteractivity(this.isDialogOpen());
       },
       isDialogOpen() {
         return !!(this.el && this.el.dialogArea && !this.el.dialogArea.classList.contains("closed"));
       },
       setActionLock(locked) {
-        document.body.classList.toggle("dialog-action-lock", Boolean(locked));
+        const isLocked = Boolean(locked);
+        document.body.classList.toggle("dialog-action-lock", isLocked);
+        this.syncHotspotInteractivity(isLocked);
+      },
+      syncHotspotInteractivity(locked = this.isDialogOpen()) {
+        if (!this.el || !this.el.hotspotsLayer) return;
+        const scene = scenes[State.data.currentScene];
+        this.el.hotspotsLayer.querySelectorAll(".hotspot").forEach(button => {
+          const actionId = button.dataset.actionId;
+          const actionExists = scene && scene.actions && scene.actions.some(action => action.id === actionId);
+          const done = !!State.data.completedActions[actionId];
+          const busy = !!State.data.inProgressActions[actionId] || (!!State.data.activeAction && State.data.activeAction !== actionId);
+          const blocked = Boolean(locked || done || busy || !actionExists);
+          button.disabled = blocked;
+          button.dataset.action = blocked ? "noop" : "process-node";
+          button.setAttribute("aria-disabled", blocked ? "true" : "false");
+          button.tabIndex = blocked ? -1 : 0;
+          button.classList.toggle("done", done);
+          button.classList.toggle("busy", blocked && !done);
+        });
       },
       showDialog(node) {
         this.activeNode = node;
         this.choiceLocked = false;
         this.setActionLock(true);
-        this.el.dialogArea.classList.remove("closed", "choice-mode", "text-expanded", "very-long-text");
+        this.el.dialogArea.classList.remove("closed", "choice-mode", "text-expanded", "very-long-text", "no-portrait");
         const speaker = node.speaker || "narrador";
         const char = speaker === "player" ? this.selectedPlayer() : characters[speaker] || characters.narrador;
+        this.el.dialogArea.classList.toggle("no-portrait", speaker === "caixa");
         this.el.speakerName.textContent = (char.name || "Narrador").replace("[PLAYER]", State.data.playerName || this.selectedPlayer().name);
         this.el.dialogAvatar.src = char.portrait || char.avatar;
         const text = (node.text || "").replace(/\[PLAYER\]/g, State.data.playerName || this.selectedPlayer().name);
@@ -2713,6 +3554,11 @@
         area.classList.toggle("text-expanded", longText);
         area.classList.toggle("very-long-text", veryLong);
       },
+      syncDialogTextScroll() {
+        const textEl = this.el && this.el.dialogText;
+        if (!textEl) return;
+        textEl.scrollTop = textEl.scrollHeight;
+      },
       startTypewriter(text, node) {
         clearInterval(this.typingTimer);
         this.typeText = text;
@@ -2728,6 +3574,7 @@
         this.typingTimer = setInterval(() => {
           this.typeIndex += 1;
           this.el.dialogText.textContent = this.typeText.slice(0, this.typeIndex);
+          this.syncDialogTextScroll();
           if (this.typeIndex % 4 === 0) this.updateDialogLayout(false);
           if (this.typeIndex >= this.typeText.length) this.finishTypewriter(node);
         }, speed);
@@ -2735,6 +3582,7 @@
       finishTypewriter(node = this.activeNode) {
         clearInterval(this.typingTimer);
         this.el.dialogText.textContent = this.typeText;
+        this.syncDialogTextScroll();
         this.renderChoices(node);
       },
       renderChoices(node) {
@@ -2760,7 +3608,7 @@
       closeDialog() {
         clearInterval(this.typingTimer);
         this.el.dialogArea.classList.add("closed");
-        this.el.dialogArea.classList.remove("choice-mode", "text-expanded", "very-long-text");
+        this.el.dialogArea.classList.remove("choice-mode", "text-expanded", "very-long-text", "no-portrait");
         this.el.choicesContainer.innerHTML = "";
         this.el.skipTypingButton.classList.add("hidden");
         this.activeNode = null;
@@ -2769,10 +3617,27 @@
       showAchievement(id) {
         const ach = GameConfig.achievements[id];
         if (!ach) return;
+        clearTimeout(this.achievementTimer);
+        this.el.achievementPopup.style.transition = "";
+        this.el.achievementPopup.style.transform = "";
+        this.el.achievementPopup.classList.remove("dismissed");
         this.el.achievementPopupName.textContent = ach.name;
         this.el.achievementPopup.classList.add("show");
         Audio.success();
-        setTimeout(() => this.el.achievementPopup.classList.remove("show"), 3200);
+        this.achievementTimer = setTimeout(() => this.dismissAchievement(), 4200);
+      },
+      dismissAchievement() {
+        clearTimeout(this.achievementTimer);
+        if (!this.el.achievementPopup) return;
+        this.el.achievementPopup.style.transition = "";
+        this.el.achievementPopup.style.transform = "";
+        this.el.achievementPopup.classList.add("dismissed");
+        this.el.achievementPopup.classList.remove("show");
+      },
+      resetAchievementDrag() {
+        if (!this.el.achievementPopup) return;
+        this.el.achievementPopup.style.transition = "";
+        this.el.achievementPopup.style.transform = "";
       },
       renderAchievements(mode = "unlocked") {
         this.el.achievementsList.innerHTML = "";
@@ -2859,11 +3724,48 @@
           if (UI.el.dialogText.textContent !== UI.typeText) UI.finishTypewriter();
           else this.advanceAfterDialog();
         });
-        [UI.el.musicVolume, UI.el.sfxVolume, UI.el.typingSpeed, UI.el.reduceMotionSetting].forEach(input => {
+        if (UI.el.achievementPopup) {
+          let achievementDragStart = null;
+          let achievementDragged = false;
+          UI.el.achievementPopup.addEventListener("click", (event) => {
+            event.stopPropagation();
+            if (!achievementDragged) UI.dismissAchievement();
+            achievementDragged = false;
+          });
+          UI.el.achievementPopup.addEventListener("pointerdown", (event) => {
+            if (!UI.el.achievementPopup.classList.contains("show")) return;
+            achievementDragStart = { x: event.clientX, y: event.clientY };
+            achievementDragged = false;
+            UI.el.achievementPopup.style.transition = "none";
+            UI.el.achievementPopup.setPointerCapture?.(event.pointerId);
+          });
+          UI.el.achievementPopup.addEventListener("pointermove", (event) => {
+            if (!achievementDragStart) return;
+            const dx = event.clientX - achievementDragStart.x;
+            const dy = event.clientY - achievementDragStart.y;
+            if (Math.abs(dx) > 6 || Math.abs(dy) > 6) achievementDragged = true;
+            if (dx > 0) UI.el.achievementPopup.style.transform = `translateX(${dx}px)`;
+          });
+          UI.el.achievementPopup.addEventListener("pointerup", (event) => {
+            if (!achievementDragStart) return;
+            const dx = event.clientX - achievementDragStart.x;
+            achievementDragStart = null;
+            UI.el.achievementPopup.releasePointerCapture?.(event.pointerId);
+            if (dx > 70) UI.dismissAchievement();
+            else UI.resetAchievementDrag();
+          });
+          UI.el.achievementPopup.addEventListener("pointercancel", () => {
+            achievementDragStart = null;
+            UI.resetAchievementDrag();
+          });
+        }
+        [UI.el.musicVolume, UI.el.sfxVolume, UI.el.typingSpeed, UI.el.gameFontScale, UI.el.reduceMotionSetting].filter(Boolean).forEach(input => {
           input.addEventListener("input", () => {
             State.data.settings.musicVolume = parseFloat(UI.el.musicVolume.value);
             State.data.settings.sfxVolume = parseFloat(UI.el.sfxVolume.value);
             State.data.settings.typingSpeed = parseInt(UI.el.typingSpeed.value, 10);
+            State.data.settings.gameFontScale = parseFloat(UI.el.gameFontScale ? UI.el.gameFontScale.value : 1) || 1;
+            document.documentElement.style.setProperty("--game-text-scale", String(State.data.settings.gameFontScale));
             State.data.settings.reduceMotion = UI.el.reduceMotionSetting.checked;
             State.saveSettings();
             if (State.data.settings.musicVolume <= 0) Audio.stopMusic(); else Audio.startMusic();
@@ -3153,7 +4055,7 @@
       get(slot) { try { const raw = localStorage.getItem(this.prefix + slot); return raw ? JSON.parse(raw) : null; } catch(_) { return null; } },
       save(slot) { try { localStorage.setItem(this.prefix + slot, JSON.stringify({ ...State.data, timestamp: new Date().toISOString() })); Audio.success(); this.render("save"); UI.hideAllModals(); } catch(err) { console.error(err); Audio.fail(); } },
       load(slot) { const data = this.get(slot); if (!data) return; State.load(data); UI.hideAllModals(); Game.continueGame(); },
-      remove(slot) { UI.confirm("Excluir save", `Excluir o slot ${slot + 1}?`, () => { localStorage.removeItem(this.prefix + slot); this.render(Game.saveMode); }); },
+      remove(slot) { UI.confirm("Excluir save", `Excluir o slot ${slot + 1}?`, () => { try { localStorage.removeItem(this.prefix + slot); this.render(Game.saveMode); } catch(err) { console.error(err); Audio.fail(); } }); },
       render(mode) {
         UI.el.saveSlotsContainer.innerHTML = "";
         for (let i = 0; i < 4; i++) {
@@ -3174,13 +4076,18 @@
       }
     };
 
-    document.addEventListener("DOMContentLoaded", () => {
+    const bootGame = () => {
       try { Game.init(); }
       catch (error) {
         console.error(error);
         document.body.innerHTML = `<div style="padding:24px;color:white;background:#0d0c1d;font-family:monospace"><h1>Erro ao iniciar o jogo</h1><p>${escapeHTML(error.message)}</p></div>`;
       }
-    });
+    };
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", bootGame, { once: true });
+    } else {
+      bootGame();
+    }
   })();
   </script>
 </body>
